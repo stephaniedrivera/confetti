@@ -1,19 +1,20 @@
-.color-swatch {
-	background-color: white;
-	padding: .5rem;
-}
-
-.swatch {
-	border: 3px solid #000;
-	max-width: 100%;
-}
+/*
+-----------------------------------------
+	PAGE LAYOUT
+-----------------------------------------
+*/
 
 body {
 	background-color: var(--color-beluga-light);
 	border-radius: 1rem;
+	border: 10px solid var(--color-gray);
 	margin: auto;
-	max-width: 50rem;
-	padding: 1rem;
+	max-width: 40rem;
+	padding: 2rem 3rem;
+}
+
+img {
+	max-width: 100%;
 }
 
 /*
@@ -32,11 +33,13 @@ html {
 	--color-blue: #237BA0;
 	--color-blue-dark: #004F71;
 	--color-blue-light: #5EAAD1;
+	--color-gray: #757575;
+	--color-gray-light: #D5D2D7;
 	--color-green: #20BF55;
 	--color-green-dark: #008D27;
 	--color-green-light: #65F384;
-	--color-orange: #ff91fc;
-	--color-orange-dark: #ffb045;
+	--color-orange: #ff9f1c;
+	--color-orange-dark: #e8911a;
 	--color-orange-light: #ffb045;
 	--color-teal: #5fb49c;
 	--color-teal-dark: #2c846e;
@@ -65,31 +68,32 @@ html {
 	--font-heading: myriad-pro-semiextended, Helvetica, Arial, sans-serif;
 	--font-heading-weight: 600;
 	--font-logo: feltro-texture-1, sans-serif;
-	--font-logo-size: 3rem;
 	--font-logo-weight: 400;
 	--line-height-squish: .8;
 	--line-height-squish-less:.9;
 	--margin-top-heading: 2em;
-	--ratio: 1.25;
-	--size-one: calc( 3.052rem * var(--ratio));
-	--size-two: calc( 2.441rem * var(--ratio));
-	--size-three: calc( 1.953rem * var(--ratio));
-	--size-four: calc( 1.563rem * var(--ratio));
-	--size-five: calc( 1.25rem * var(--ratio));
+	--ratio: 1.2;
+	--size-one: calc( 2.488em * var(--ratio));
+	--size-two: calc( 2.074em * var(--ratio));
+	--size-three: calc( 1.72em * var(--ratio));
+	--size-four: calc( 1.44em * var(--ratio));
+	--size-five: calc( 1.2em * var(--ratio));
 	--size-six: calc( 1rem * var(--ratio));
+	--size-seven: 1em;
 	--size-tertiary: calc( .75rem * var(--ratio));
 }
 
 html {
-	background-color: var(--color-beluga-dark);
+	background-color: var(--color-black-light);
 	color: var(--color-text-primary);
 	font-family: var(--font-primary);
 	line-height: 1.7;
-	margin: 1rem;
+	margin: 3rem;
 }
 
 a {
 	color: var(--color-red-light);
+	display: inline-block;
 	font-family: var(--font-bold);
 	font-weight: var(--font-bold-weight);
 	text-decoration: none;
@@ -106,7 +110,7 @@ a:hover {
 a:focus {
 	color: var(--color-teal-light);
 	outline: none;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 a:active {
@@ -130,27 +134,32 @@ h4, h5, h6 {
 }
 
 h1 {
-	font-size: var(--size-one);
-}
-
-h2 {
 	font-size: var(--size-two);
 }
 
-h3 {
+h2 {
 	font-size: var(--size-three);
 }
 
-h4 {
+h3 {
 	font-size: var(--size-four);
 }
 
-h5 {
+h4 {
 	font-size: var(--size-five);
 }
 
-h6 {
+h5 {
 	font-size: var(--size-six);
+}
+
+h6 {
+	font-size: var(--size-seven);
+}
+
+
+figcaption {
+	font-size: var(--size-tertiary);
 }
 
 .featured-text {
@@ -170,6 +179,7 @@ h6 {
 	LIST STYLES
 -----------------------------------------
 */
+
 ul {
 	list-style: square;
 }
@@ -198,6 +208,7 @@ blockquote {
 	color: var(--color-black-light);
 	font-size: var(--size-three);
 	line-height: var(--line-height-squish);
+	padding-top: 2rem;
 	text-align: center;
 }
 
@@ -205,6 +216,7 @@ cite {
 	color: var(--color-text-primary-light);
 	display: block;
 	font-size: var(--size-six);
+	margin-top: 1.5rem;
 	padding-bottom: 2.5rem;
 }
 
@@ -224,6 +236,16 @@ cite {
 	font-weight: var(--font-heading-weight);
 }
 
+.color-swatch {
+	background-color: white;
+	padding: .5rem;
+}
+
+.swatch {
+	border: 3px solid #000;
+	max-width: 100%;
+}
+
 /*
 -----------------------------------------
 	HEADER COMPONENT
@@ -240,15 +262,11 @@ header a {
 	color: var(--color-blue);
 }
 
-.logo {
+.logo, .logo:visited, .logo:hover {
 	color: var(--color-orange-light);
 	font-family: var(--font-logo);
-	font-size: var(--font-logo-size);
+	font-size: var(--size-one);
 	font-weight: var(--font-logo-weight);
-}
-
-.logo:visited {
-	color: var(--color-orange-light)
 }
 
 .main-nav {
@@ -298,4 +316,116 @@ footer {
 	margin: .5rem;
 	list-style: none;
 	padding: 0;
+}
+
+
+/*
+-----------------------------------------
+	BUTTON COMPONENTS
+-----------------------------------------
+*/
+
+html {
+	--button-radius: .4rem;
+	--padding-button: .5rem 2rem;
+}
+
+.button {
+	border: 3px solid var(--color-beluga-light);
+	border-radius: var(--button-radius);
+	font-family: var(--font-primary);
+}
+
+.button-hero, .button-hero:visited {
+	background-color: var(--color-teal);
+	color: var(--color-beluga-light);
+	text-align: center;
+	text-shadow:  0 0 .2rem var(--color-black-light);
+	text-transform: uppercase;
+	font-size: var(--size-four);
+	padding: var(--padding-button);
+	transition: background-color .3s ease-in-out;
+}
+
+.button-hero:hover, .button-hero:focus {
+	background-color: var(--color-teal-dark);
+	color: var(--color-beluga-light);
+	text-shadow: 0 .5rem .5rem var(--color-black-dark);
+	transition: all .3s ease-in-out;
+}	
+
+.button-hero:active {
+	border: 3px solid var(--color-teal-light);
+}
+
+.button-normal, .button-normal:visited {
+	background-color: var(--color-orange);
+	border: 2px solid var(--color-beluga-light);
+	color: var(--color-beluga-light);
+	text-align: center; 
+	text-shadow: 0 0 .3rem var(--color-black);
+	font-size: var(--size-seven);
+	padding: var(--padding-button);
+}
+
+.button-normal:hover, .button-normal:focus {
+	background-color: var(--color-orange);
+	border: 2px solid var(--color-orange-dark);
+	color: var(--color-beluga-light);
+	transition: all .3s ease-in-out;
+}
+
+.button-normal:active {
+	border: 2px solid var(--color-orange-light);
+}
+
+.button-secondary, .button-secondary:visited {
+	background-color: var(--color-gray-light);	
+	border: 2px solid var(--color-beluga-light);
+	color: var(--color-text-primary);
+	padding: var(--padding-button);
+}
+
+.button-secondary:hover, .button-secondary:focus {
+	border: 2px solid var(--color-black-light);
+	transition: all .3s ease-in-out;
+}
+
+.button-secondary:active {
+	border: 2px solid var(--color-teal);
+}
+
+/*
+-----------------------------------------
+	ACCORDIONS	
+-----------------------------------------
+*/
+
+details {
+	margin: 1.5rem .5rem;
+	border-top: 2px solid var(--color-purple);
+	padding-top: 2rem;
+}
+
+summary span {
+	font-weight: var(--font-bold-weight);
+	padding: .2rem;
+}
+
+summary:focus {
+	color: var(--color-blue);
+	outline: none;
+}
+
+details div {
+	background-color: var(--color-beluga);
+	box-shadow: .2rem .2rem .3rem var(--color-gray);
+	font-family: var(--font-primary);
+	padding: 1rem;
+	margin-left: 1rem;
+}
+
+details ul,ol {
+	padding: 0;
+	margin-left: 1rem;
 }
