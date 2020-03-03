@@ -4,13 +4,19 @@
 -----------------------------------------
 */
 
-body {
-	background-color: var(--color-beluga-light);
+main {
+	background-color: var(--color-beluga);
 	border-radius: 1rem;
-	border: 10px solid var(--color-gray);
 	margin: auto;
 	max-width: 40rem;
-	padding: 2rem 3rem;
+}
+
+html {
+	background-color: var(--color-beluga);
+	color: var(--color-text-primary);
+	font-family: var(--font-primary);
+	line-height: 1.7;
+	margin: 3rem;
 }
 
 img {
@@ -83,14 +89,6 @@ html {
 	--size-tertiary: calc( .75rem * var(--ratio));
 }
 
-html {
-	background-color: var(--color-black-light);
-	color: var(--color-text-primary);
-	font-family: var(--font-primary);
-	line-height: 1.7;
-	margin: 3rem;
-}
-
 a {
 	color: var(--color-red-light);
 	display: inline-block;
@@ -104,7 +102,7 @@ a:visited {
 }
 
 a:hover {
-	color: var(--color-red);
+	color: var(--color-teal);
 }
 
 a:focus {
@@ -253,8 +251,10 @@ cite {
 */
 
 header {
-	border-bottom: 3px solid var(--color-beluga-dark);
-	padding: 2rem;
+	background-color: var(--color-beluga);
+	border-bottom: 3px solid var(--color-black-light);
+	margin: 0;
+	padding: 2rem 0;
 	text-align: center;
 }
 
@@ -295,7 +295,7 @@ header a {
 footer {
 	border-top: 3px solid var(--color-beluga-dark);
 	padding: 2rem;
-	margin-top: 10rem;
+	margin-top: 5rem;
 	text-align: center;
 }
 
@@ -316,6 +316,13 @@ footer {
 	margin: .5rem;
 	list-style: none;
 	padding: 0;
+}
+
+.secondary-nav p:first-of-type {
+	font-family: var(--font-heading);
+	font-weight: var(--font-heading-weight);
+	font-size: var(--size-five);
+	margin: .2rem;
 }
 
 
@@ -381,7 +388,7 @@ html {
 
 .button-secondary, .button-secondary:visited {
 	background-color: var(--color-gray-light);	
-	border: 2px solid var(--color-beluga-light);
+	border: 2px solid transparent;
 	color: var(--color-text-primary);
 	padding: var(--padding-button);
 }
@@ -418,8 +425,8 @@ summary:focus {
 }
 
 details div {
-	background-color: var(--color-beluga);
-	box-shadow: .2rem .2rem .3rem var(--color-gray);
+	background-color: var(--color-beluga-light);
+	box-shadow: .2rem .2rem .8rem var(--color-black);
 	font-family: var(--font-primary);
 	padding: 1rem;
 	margin-left: 1rem;
@@ -428,4 +435,65 @@ details div {
 details ul,ol {
 	padding: 0;
 	margin-left: 1rem;
+}
+
+
+/*
+-----------------------------------------
+	ANIMATIONS
+-----------------------------------------
+*/
+
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeout {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+/*
+-----------------------------------------
+	DIALOG MODAL	
+-----------------------------------------
+*/
+
+dialog {
+	max-width: 40rem;
+	padding: 0;
+}
+
+dialog[open] {
+	animation: fadein .5s ease;
+	background-color: var(--color-beluga);
+	box-shadow: 0 0 3rem rgba(54, 231, 231, 0.6);
+}
+
+dialog::backdrop {
+	animation: fadein .5s ease-in-out;
+	background-color: rgba(0,0,0,.5);
+}
+
+dialog p {
+	padding: 1rem;
+}
+
+.heading-modal {
+	margin-top: 0;
+	background-color: var(--color-gray);
+	color: var(--color-beluga-light);
+	padding: .7rem;
 }

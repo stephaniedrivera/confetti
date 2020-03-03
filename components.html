@@ -26,7 +26,7 @@
 
 	<main>
 
-	<h1>Confetti Design System Components</h1>
+	<h1>Components</h1>
 	<h2>Link Buttons</h2>
 	<figure>
 		<a href="" class="button button-hero">Hero Button</a>
@@ -42,7 +42,7 @@
 		<a href="" class="button button-secondary">Secondary Button</a><figcaption>Used when there are several selections available.</figcaption>
 	</figure>
 
-	<h3>Drop-Down Menu/Options</h3>
+	<h3>Drop-Down Menu/Accordions</h3>
 	<details>
 		<summary><span>This is a drop-down Menu</span></summary>
 		<div>
@@ -65,6 +65,15 @@
 		<div>The mantis shrimp is my spirit animal.</div>
 	</details>
 
+	<h4>Modal Dialog</h4>
+	<figure>
+		<button id="open-modal" type="button">Open Modal</button>
+		<dialog id="modal-demo">
+			<h4 class="heading-modal">Heading inside the Modal</h4>
+			<p>This is an example paragraph for inside our modal. We need it to be a couple sentences long so we're gonna type some stuff here to fill the space so you we can see exactly how this is going to look.</p>
+		</dialog>
+	</figure>
+
 	</main>
 
 	<footer class="secondary-nav">
@@ -77,6 +86,24 @@
 				<li><a href="https://www.instagram.com/4_piecenugget/">Instagram</a></li>
 				<li><a href="https://stephaniedrivera.000webhostapp.com/">Website</a></li>
 	</footer>
+	<script>
+	document.addEventListener('DOMContentLoaded', function(){
+
+	const modal = document.querySelector('dialog');
+	const open = document.getElementById('open-modal');
+
+	open.addEventListener('click', () => {
+	modal.showModal();
+	});
+
+	modal.addEventListener('click', event => {
+	if (event.target === modal) {
+	modal.close('cancelled');
+	}
+	});
+
+	});
+	</script>
 
 </body>
 </html>
