@@ -16,7 +16,7 @@ html {
 	color: var(--color-text-primary);
 	font-family: var(--font-primary);
 	line-height: 1.7;
-	margin: 3rem;
+	margin: 0;
 }
 
 img {
@@ -251,7 +251,7 @@ cite {
 */
 
 header {
-	background-color: var(--color-beluga);
+	background-color: var(--color-orange-light);
 	border-bottom: 3px solid var(--color-black-light);
 	margin: 0;
 	padding: 2rem 0;
@@ -263,10 +263,17 @@ header a {
 }
 
 .logo, .logo:visited, .logo:hover {
-	color: var(--color-orange-light);
+	background-color: var(--color-orange-light);
+	color: var(--color-beluga-light);
+	display: block;
 	font-family: var(--font-logo);
-	font-size: var(--size-one);
+	font-size: 7rem;
 	font-weight: var(--font-logo-weight);
+	padding: 2rem 0rem;
+}
+
+.logo {
+	animation: fadein 1s linear;
 }
 
 .main-nav {
