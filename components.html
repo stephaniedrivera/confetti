@@ -29,29 +29,29 @@
 	<h1>Components</h1>
 	<h2>Link Buttons</h2>
 	<figure>
-		<a href="" class="button button-hero">Hero Button</a>
+		<a href="" class="link-button button-hero">Hero Button</a>
 		<figcaption>This is primarily used for a call to action.</figcaption>
 	</figure>
 
 	<figure>
-		<a href="" class="button button-normal">Normal Button</a>
+		<a href="" class="link-button button-normal">Normal Button</a>
 		<figcaption>Used to draw attention to a specific action on the page.</figcaption>
 	</figure>
 
 	<figure>
-		<a href="" class="button button-secondary">Secondary Button</a><figcaption>Used when there are several selections available.</figcaption>
+		<a href="" class="link-button button-secondary">Secondary Button</a><figcaption>Used when there are several selections available.</figcaption>
 	</figure>
 
 	<h3>Drop-Down Menu/Accordions</h3>
 	<details>
-		<summary><span>This is a drop-down Menu</span></summary>
+		<summary>This is a drop-down Menu</summary>
 		<div>
 			<p>I kind of like the little triangle carrot marker, I just want to figure out how to put it on the right side.</p>
 		</div>
 	</details>
 
 	<details>
-		<summary><span>What else can we put in a drop-down menu?</span></summary>
+		<summary>What else can we put in a drop-down menu?</summary>
 		<div>
 			<ul>
 				<li>We can house a list here!</li>
@@ -61,7 +61,7 @@
 	</details>
 
 	<details>
-		<summary><span>And here's another example for good measure</span></summary>
+		<summary>And here's another example for good measure</summary>
 		<div>The mantis shrimp is my spirit animal.</div>
 	</details>
 
@@ -74,10 +74,32 @@
 		</dialog>
 	</figure>
 
+	<h5>Form Inputs</h5>
+	<figure>
+		<form action="#">
+			<label for="name">Your Full Name</label>
+			<input type="text" required id="full-name" name="name">
+			<label for="email">Email</label>
+			<input type="email" required id="email" name="email">
+			<label for="phone">Telephone</label>
+			<input type="tel" id="phone" name="phone">
+			<label for="contact preference">Preferred Communication</label>
+			<p class="form-instruction-text">What is the best method of reaching you?</p>
+			<select id="contact-preference" name="preference">
+				<option disabled hidden selected>Choose One</option>
+				<option>Phone</option>
+				<option>Email</option>
+				<option>Text Message</option>
+			</select>
+			<label for="message">
+			<textarea id="user-message" name="message" placeholder="How may we help you?" required></textarea>
+			<button class="button-link-submit" type="submit">Let's Chat!</button>
+		</form>
+	</figure>
 	</main>
 
 	<footer class="secondary-nav">
-		<img class="profile-photo" src="images/profile-small.jpg">
+		<img class="profile-photo" src="images/profile-small.jpg" alt="Stephanie Rivera profile photo">
 		<p>Stephanie D. Rivera<p>
 		<p>Stephanie is a UX student at Austin Community College. She enjoys binge-worthy TV, whiskey, wine, and spoiling her rescue pup.</p>
 		<nav>
