@@ -12,22 +12,24 @@
 </head>
 
 <body>
-	<header class="main-nav">
-		<a href="index.html" class="logo">Confetti</a>
-		<nav>
-			<ul>
+	<header>
+	<div class="parent-div">
+		<nav class="nav-primary">
+				<a class="logo" href="index.html">Confetti</a>
+				<ul>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="style.html">Style</a></li>
-				<li><a href="components.html">Components</a></li>
+				<li><a class="current-page" href="components.html">Components</a></li>
 				<li><a href="layouts.html">Layout</a></li>
-			</ul>
+				</ul>
 		</nav>
+	</div>
 	</header>
 
 	<main>
 
 	<h1>Components</h1>
-	<h2>Link Buttons</h2>
+	<h2 id="linkbuttons">Link Buttons</h2>
 	<figure>
 		<a href="" class="link-button button-hero">Hero Button</a>
 		<figcaption>This is primarily used for a call to action.</figcaption>
@@ -42,7 +44,7 @@
 		<a href="" class="link-button button-secondary">Secondary Button</a><figcaption>Used when there are several selections available.</figcaption>
 	</figure>
 
-	<h3>Drop-Down Menu/Accordions</h3>
+	<h3 id="accordions">Drop-Down Menu/Accordions</h3>
 	<details>
 		<summary>This is a drop-down Menu</summary>
 		<div>
@@ -65,7 +67,7 @@
 		<div>The mantis shrimp is my spirit animal.</div>
 	</details>
 
-	<h4>Modal Dialog</h4>
+	<h4 id="modal">Modal Dialog</h4>
 	<figure>
 		<button id="open-modal" type="button">Open Modal</button>
 		<dialog id="modal-demo">
@@ -74,7 +76,7 @@
 		</dialog>
 	</figure>
 
-	<h5>Form Inputs</h5>
+	<h5 id="forms">Form Inputs</h5>
 	<figure>
 		<form action="#">
 			<label for="name">Your Full Name</label>
@@ -96,36 +98,95 @@
 			<button class="button-link-submit" type="submit">Let's Chat!</button>
 		</form>
 	</figure>
+
+	<figure>
+		<form>
+		<label for="error">Error State</label>
+		<input class="form-error" type="text" id="error" name="error">
+		<p class="form-instruction-text form-error-instruction-text">Please provide the required info!</p>
+		</form>
+	</figure>
+
+	<h6 id="navigation">Navigation</h6>
+	<p>Primary Navigation</p>
+		<figure class="example-nav">
+			<img src="images/primary-nav_325.png">
+			<figcaption>For mobile viewports up to 550px, primary navigation links will stack at the very top of the page.</figcaption>
+		</figure>
+
+		<figure class="example-nav">
+			<img src="images/primary-nav_stretch.png">
+			<figcaption>For viewports wider than 550px, primary navigation links align to the right of the screen in a fixed navigation bar which remains at the top of the viewport.</figcaption>
+		</figure>
+
+	<p>Secondary Navigation</p>
+		<figure class="example-nav">
+			<img src="images/nav-secondary-stacked.png" />
+			<figcaption>The secondary navigation will stack at the bottom of the page on mobile and small viewports.</figcaption>
+		</figure>
+
+		<figure class="example-nav">
+			<img src="images/nav-secondary-grid.png">
+			<figcaption>Secondary navigation is still housed at the bottom of the page with wider viewports but is displayed with grid.</figcaption>
+		</figure>
 	</main>
 
-	<footer class="secondary-nav">
-		<img class="profile-photo" src="images/profile-small.jpg" alt="Stephanie Rivera profile photo">
-		<p>Stephanie D. Rivera<p>
-		<p>Stephanie is a UX student at Austin Community College. She enjoys binge-worthy TV, whiskey, wine, and spoiling her rescue pup.</p>
-		<nav>
+	<footer>
+		<section class="bio">
+		<img class="profile-photo" src="images/profile-small.jpg" alt="Stephanie Rivera profile">
+				<p>Stephanie D. Rivera is a UX student at Austin Community College. She enjoys binge-worthy TV, whiskey, wine, and spoiling her rescue pup.</p>
+		</section>
+		<nav  class="social-links">
 			<ul>
 				<li><a href="https://www.linkedin.com/in/stephaniedrivera/">LinkedIn</a></li>
 				<li><a href="https://www.instagram.com/4_piecenugget/">Instagram</a></li>
 				<li><a href="https://stephaniedrivera.000webhostapp.com/">Website</a></li>
+			</ul>
+		</nav>
+
+
+<section class="nav-secondary">
+	<a class="logo" href="index.html">Confetti</a>
+
+	<div class="nav-secondary-style">
+			<details>
+				<summary>Style</summary>
+				<ul>
+					<li><a href="style.html#colorpalette">Color Palette</a></li>
+				</li>
+				<li><a href="style.html#typography">Typography</a></li>
+						<ul>
+							<li><a href="style.html#fonts">Fonts</a></li>
+							<li><a href="style.html#headings">Heading Styles</a></li>
+							<li><a href="style.html#bodytext">Body Text</a></li>
+						</ul>
+					<li><a href="style.html#lists">List Styles</a></li>
+					<li><a href="style.html#blockquotes">Block Quotes</a></li>
+				</ul>
+			</details>
+	</div>
+
+	<div class="nav-secondary-components">
+			<details>
+				<summary>Components</summary>
+				<ul>
+					<li><a href="components.html#linkbuttons">Link Buttons</a></li>
+					<li><a href="components.html#accordions">Drop-Down Menu/Accordions</a></li>
+					<li><a href="components.html#modal">Modal Dialog</a></li>
+					<li><a href="components.html#forms">Forms</a></li>
+					<li><a href="components.html#navigation">Navigation</a></li>
+
+				</ul>
+			</details>
+	</div>
+
+	<div class="nav-secondary-layout">
+		<details>
+			<summary>Layout</summary>
+		</details>
+	</div>
+	</section>
 	</footer>
-	<script>
-	document.addEventListener('DOMContentLoaded', function(){
-
-	const modal = document.querySelector('dialog');
-	const open = document.getElementById('open-modal');
-
-	open.addEventListener('click', () => {
-	modal.showModal();
-	});
-
-	modal.addEventListener('click', event => {
-	if (event.target === modal) {
-	modal.close('cancelled');
-	}
-	});
-
-	});
-	</script>
-
 </body>
+
 </html>

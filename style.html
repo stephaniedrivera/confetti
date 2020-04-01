@@ -13,20 +13,22 @@
 
 <body>
 	<header>
-		<a href="index.html" class="logo">Confetti</a>
-		<nav class="main-nav">
-			<ul>
+	<div class="parent-div">
+		<nav class="nav-primary">
+				<a class="logo" href="index.html">Confetti</a>
+				<ul>
 				<li><a href="index.html">Home</a></li>
-				<li><a href="style.html">Style</a></li>
+				<li><a class="current-page" href="style.html">Style</a></li>
 				<li><a href="components.html">Components</a></li>
 				<li><a href="layouts.html">Layout</a></li>
-			</ul>
+				</ul>
 		</nav>
+	</div>
 	</header>
 
 	<main>
 		<h1>Styles</h1>
-		<h2>Color Palette</h2>
+		<h2 id="colorpalette">Color Palette</h2>
 		<p>Brand Colors</p>
 		<p>We believe that color is absolutely essential to our work, and we want our site to reflect our vibrant approach to event production.</p>
 
@@ -45,7 +47,7 @@
 				<figcaption>Carrot Orange, Orange, Yellow Orange</figcaption>
 			</figure>
 
-			<h3>Typography</h3>
+			<h3 id="typography">Typography</h3>
 			<p>To allow for varying degrees of emphasis, we have provided a range of grey tones for use throughout the site, especially for copy text.</p>
 
 			<figure>
@@ -53,13 +55,13 @@
 				<figcaption>Jet, Outer Space, Confetti Grey, Disabled Grey, Light Grey </figcaption>
 			</figure>
 
-			<h4>Primary Font</h4>
+			<h4 id="fonts">Primary Font</h4>
 			<figure>
 				<p class="example-heading">Heading: Myriad Pro Semi-Extended</p>
 				<p class="example-copy">Body Copy: Myriad Pro</p>
 			</figure>
 
-			<h4>Headings</h4>
+			<h4 id="headings">Headings</h4>
 				<figure>
 					<h1>Heading 1</h1>
 					<h2>Heading 2</h2>
@@ -69,15 +71,15 @@
 					<h6>Heading 6</h6>
 			</figure>
 
-			<h4>Body Text</h4>
+			<h4 id="bodytext">Body Text</h4>
 			<figure>
 				<p class="featured-text">This is example featured text</p>
 				<p> <a href-="">Lorem ipsum</a> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <strong>magna aliqua</strong>. Tincidunt id aliquet risus feugiat in ante. Erat pellentesque adipiscing commodo elit. Ultrices in iaculis nunc sed augue lacus viverra vitae. Sit amet aliquam id diam maecenas ultricies. <em>Et leo duis ut diam.</em></p>
 				<p class="tertiary-text">This is example tertiary copy.</p>
 			</figure>
 
-			<h5>List Styles</h5>
-			<h6>Unordered List</h6>
+			<h5 id="lists">List Styles</h5>
+			<p>Unordered List</p>
 			<figure>
 				<ul>
 					<li>List Item 1</li>
@@ -98,7 +100,7 @@
 						</ol>
 			</figure>
 
-			<h5>Block Quotes</h5>
+			<h6 id="blockquotes">Block Quotes</h6>
 			<figure>
 				<blockquote>
 				"The only way to do great work is to love what you do."
@@ -108,16 +110,61 @@
 	</main>
 
 	<footer>
-		<img class="profile-photo" src="images/profile-small.jpg">
-		<p>Stephanie D. Rivera<p>
-		<p>Stephanie is a UX student at Austin Community College. She enjoys binge-worthy TV, whiskey, wine, and spoiling her rescue pup.</p>
-		<nav class="secondary-nav">
+		<section class="bio">
+		<img class="profile-photo" src="images/profile-small.jpg" alt="Stephanie Rivera profile">
+				<p>Stephanie D. Rivera is a UX student at Austin Community College. She enjoys binge-worthy TV, whiskey, wine, and spoiling her rescue pup.</p>
+		</section>
+		<nav  class="social-links">
 			<ul>
 				<li><a href="https://www.linkedin.com/in/stephaniedrivera/">LinkedIn</a></li>
 				<li><a href="https://www.instagram.com/4_piecenugget/">Instagram</a></li>
 				<li><a href="https://stephaniedrivera.000webhostapp.com/">Website</a></li>
 			</ul>
 		</nav>
+
+
+<section class="nav-secondary">
+	<a class="logo" href="index.html">Confetti</a>
+
+	<div class="nav-secondary-style">
+			<details>
+				<summary>Style</summary>
+				<ul>
+					<li><a href="style.html#colorpalette">Color Palette</a></li>
+				</li>
+				<li><a href="style.html#typography">Typography</a></li>
+						<ul>
+							<li><a href="style.html#fonts">Fonts</a></li>
+							<li><a href="style.html#headings">Heading Styles</a></li>
+							<li><a href="style.html#bodytext">Body Text</a></li>
+						</ul>
+					<li><a href="style.html#lists">List Styles</a></li>
+					<li><a href="style.html#blockquotes">Block Quotes</a></li>
+				</ul>
+			</details>
+	</div>
+
+	<div class="nav-secondary-components">
+			<details>
+				<summary>Components</summary>
+				<ul>
+					<li><a href="components.html#linkbuttons">Link Buttons</a></li>
+					<li><a href="components.html#accordions">Drop-Down Menu/Accordions</a></li>
+					<li><a href="components.html#modal">Modal Dialog</a></li>
+					<li><a href="components.html#forms">Forms</a></li>
+					<li><a href="components.html#navigation">Navigation</a></li>
+
+				</ul>
+			</details>
+	</div>
+
+	<div class="nav-secondary-layout">
+		<details>
+			<summary>Layout</summary>
+		</details>
+	</div>
+	</section>
 	</footer>
 </body>
+
 </html>
