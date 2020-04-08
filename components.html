@@ -26,6 +26,14 @@
 	</div>
 	</header>
 
+	<section class="hero-block hero-image-components">
+		<h1 class="hero-heading">components</h1>
+		<div>
+			<p>This is some text for the hero image. This is some text for the hero image. This is some text for the hero image.</p>
+			<a class="button-hero">This button does nothing</a>
+		</div>
+	</section>
+
 	<main>
 
 	<h1>Components</h1>
@@ -129,6 +137,54 @@
 			<img src="images/nav-secondary-grid.png">
 			<figcaption>Secondary navigation is still housed at the bottom of the page with wider viewports but is displayed with grid.</figcaption>
 		</figure>
+
+	<h6>Notifications</h6>
+	<p>For display purposes, these animations repeat infinitely.</p>
+		<figure>
+			<section class="notification notify-error">
+				<h1>Womp Womp</h1>
+				<div>
+					<img src="images/icon-facepalm-48.png">
+					<p>Oh, no! Something isn't quite right here.</p>
+				</div>
+			</section>
+		</figure>
+
+		<figure>
+			<section class="notification notify-warning">
+				<h1>You sure about this?</h1>
+				<div>
+					<img src="images/icon-error-40.png">
+					<p>You better check yo'self before...well, you know.</p>
+				</div>
+			</section>
+		</figure>
+
+		<figure>
+			<section class="notification notify-neutral">
+				<h1>Neutral Hedgehog says...</h1>
+				<div>
+					<img src="images/icon-hedgehog-48.png">
+					<p>It is your birthday.</p>
+				</div>
+			</section>
+		</figure>
+
+		<figure>
+			<section class="notification notify-success">
+				<h1>Hot diggity dog!</h1>
+				<div>
+					<img src="images/icon-cheers-48.png">
+					<p>Hip, hip, hooray! You did it!</p>
+				</div>
+			</section>
+		</figure>
+
+		<h6>Hero Block</h6>
+		<p>Below, you'll see a screenshot of our hero-block. This example includes some featured text and our "hero button" from our main page. Sub-pages follow the same layout, but will only use the featured text and hero button if there is an appropriate need. The hero block is an opportunity to showcase shapshots of our events, so we like to use vibrant and energetic photos from our productions.</p>
+		<figure>
+			<a href="hero-block.html"><img src="images/hero-screenshot.png" alt="screenshot of hero image"></a>
+		</figure>
 	</main>
 
 	<footer>
@@ -188,5 +244,22 @@
 	</section>
 	</footer>
 </body>
+<script>
+	document.addEventListener('DOMContentLoaded', function(){
 
+	const modal = document.querySelector('dialog');
+	const open = document.getElementById('open-modal');
+
+	open.addEventListener('click', () => {
+	modal.showModal();
+	});
+
+	modal.addEventListener('click', event => {
+	if (event.target === modal) {
+	modal.close('cancelled');
+	}
+	});
+
+	});
+	</script>
 </html>
