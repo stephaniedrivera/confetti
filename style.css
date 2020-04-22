@@ -18,9 +18,12 @@ body {
 }
 
 main {
-	margin: auto;
-	max-width: 45rem;
 	padding: 1.5rem;
+}
+
+.wrapper {
+	max-width: 40rem;
+	margin: auto;
 }
 
 img {
@@ -200,7 +203,7 @@ figcaption {
 @media (min-width: 1000px) {
 	html {
 		font-size: 16px;
-		--ratio: 1.12;
+		--ratio: 1.25;
 	}
 
 }
@@ -240,7 +243,8 @@ blockquote {
 	color: var(--color-black-light);
 	font-size: var(--size-three);
 	line-height: var(--line-height-squish);
-	padding-top: 2rem;
+	margin: auto 1rem;
+	padding: 1rem;
 	text-align: center;
 }
 
@@ -249,7 +253,7 @@ cite {
 	display: block;
 	font-size: var(--size-six);
 	margin-top: 1.5rem;
-	padding-bottom: 2.5rem;
+	padding-bottom: .5rem;
 }
 
 
@@ -525,14 +529,18 @@ html {
 }
 
 
- .card {
+.card {
 	background-color: var(--color-beluga-light);
 	border: 3px double rgba(43, 42, 42, 0.5);
 	box-shadow: var(--box-shadow-right);
 	box-sizing: border-box;
-	margin: 2rem auto;
-	max-width: 90%;
-	transition: all .5s ease;
+	margin: .5rem;
+	transition: all .2s ease;
+}
+.card:hover {
+	box-shadow: 0 0 1rem var(--color-beluga-dark);
+	transform: scale(1.05);
+	transition: all .2s ease;
 }
 .card img {
 	filter: drop-shadow(2px 2px 2px rgba(43, 42, 42, 0.9));
@@ -549,8 +557,10 @@ html {
 	padding: .5rem 1.5rem;
 }
 
-
-
+.card.id-plate {
+	margin: .5rem auto;
+	max-width: 60rem;
+}
 .id-plate-photo {
 	border-radius: 100%;
 	margin: auto;
@@ -560,8 +570,9 @@ html {
 	align-items: center;
 }
 .id-plate-contacts ul {
+	align-items: center;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	list-style: none;
 	padding: 0;
 	text-align: center;
@@ -571,37 +582,27 @@ html {
 	padding: .5rem;
 }
 .id-plate-contacts img {
-	max-width: 30px;
+	max-width: 45px;
 }
-.id-plate {
+.id-plate-main-flex {
 	display: flex;
 	flex-direction: row-reverse;
+	justify-content: center;
 }
 .id-plate-parent-flex {
 	display: flex;
-}
-.id-plate-copy {
-	align-items: center;
-	display: flex;
-
 }
 
 .card-flex-row-reverse {
 	display: flex;
 	flex-direction: row-reverse;
 }
-.card-flex-column-flex-end{
+.card-flex-column-flex-end {
+	align-content: space-between;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
 }
 
-
-
-.card-article-img {
-	margin-left: -1rem;
-	padding-top: 1rem;
-}
 .byline-pubdate {
 	line-height: .3;
 	text-align: right;
@@ -615,6 +616,8 @@ html {
 	justify-content: space-between;
 	font-size: calc(.8rem * var(--ratio));
 }
+
+
 
 .call-to-action {
 	background-repeat: no-repeat;
@@ -633,12 +636,12 @@ html {
 .call-to-action p {
 	background-color: var(--color-black-rgba);
 	color: var(--color-beluga-light);
-	text-align: left;
 }
 .call-to-action-copy {
 	margin: 8rem 0 .5rem 0;
 	text-align: center;
 }
+
 
 .article-byline-date {
 	background-color: var(--color-black-rgba);
@@ -653,20 +656,163 @@ html {
 }
 .article-copy-link-button {
 	text-align: center;
-}.article-copy-link-button p {
+}
+.article-copy-link-button p {
 	text-align: left;
 }
 
-@media ( min-width: 375px){
-	.card {
-		max-width: 350px;
-		transition: all .5s ease;
+.testimonial {
+	font-family: var(--font-logo);
+	font-weight: (var(--font-logo-weight));
+	text-align: center;
+}
+
+.event-highlight {
+	min-height: 20rem;
+}
+
+.event-highlight p {
+	background-color: var(--color-black-rgba);
+	color: var(--color-beluga-light);
+	margin-top: 0;
+}
+
+.card-callout-group {
+	max-width: 60rem;
+	margin: auto;
+}
+.callout{
+	background-position: center;
+	background-size: cover;
+	min-height: 12rem;
+	position: relative;
+}
+.callout a {
+	background-color: var(--color-black-rgba);
+	bottom: 0;
+	color: var(--color-beluga-light);
+	font-size: var(--size-six);
+	left: 0;
+	padding: 1rem;
+	position: absolute;
+	text-align: center;
+	right: 0;
+}
+
+
+@media ( min-width: 550px ){
+
+	.id-plate-bio {
+		display: flex;
+		max-width: 35rem;
+	}
+	.call-to-action p {
+		text-align: center;
+	}
+}
+
+/*
+-----------------------------------------
+	GRID LAYOUT
+-----------------------------------------
+*/
+
+@media ( min-width: 550px ){
+
+	.card-grid {
+		display: grid;
+		grid-gap: .5rem;
+		grid-template-columns: repeat(4, 1fr);
+		margin: auto;
+		max-width: 60rem;
+	}
+
+	.card-grid .card {
+		margin: 0;
+	}
+
+	.card:nth-child(1), .card:nth-child(4), .card:nth-child(5), .card:nth-child(8), .card:nth-child(9), .card:nth-child(12) {
+		grid-column-end: 5;
+		grid-column-start: 1;
+	}
+
+	.card:nth-child(2), .card:nth-child(6), .card:nth-child(10) {
+		grid-column-end: 3;
+		grid-column-start: 1;
+	}
+
+	.card:nth-child(3), .card:nth-child(7), .card:nth-child(11) {
+		grid-column-end: 5;
+		grid-column-start: 3;
+
+	}
+}
+
+@media ( min-width: 645px){
+
+	.card-callout-group {
+		display: grid;
+		grid-gap: .5rem;
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.card-callout-group .card:nth-child(1) {
+		grid-column-end: 2;
+		grid-column-start: 1;
+	}
+	.card-callout-group .card:nth-child(2) {
+		grid-column-end: 3;
+		grid-column-start: 2;
+	}
+	.card-callout-group .card:nth-child(3) {
+		grid-column-end: 4;
+		grid-column-start: 3;
+	}
+	.card.callout {
+		margin: 0;
+	}
+}	
+
+ @media ( min-width: 800px ){
+	.card-grid {
+		font-size: 14px;
+		grid-template-columns: repeat(6, 1fr);
+	}
+	.card:nth-child(1), .card:nth-child(10) {
+		grid-column-end: 4;
+		grid-column-start: 1;
+	}
+	.card:nth-child(2), .card:nth-child(11) {
+		grid-column-end: 7;
+		grid-column-start: 4;
+	}
+	.card:nth-child(3) {
+		grid-column-end: 5;
+		grid-column-start: 1;
+	}
+	.card:nth-child(4), .card:nth-child(7) {
+		grid-column-end: 7;
+		grid-column-start: 5;
+	}
+	.card:nth-child(5), .card:nth-child(8) {
+		grid-column-end: 3;
+		grid-column-start: 1;
+	}
+	.card:nth-child(6) {
+		grid-column-end: 5;
+		grid-column-start: 3;
+	}
+	.card:nth-child(9) {
+		grid-column-end: 7;
+		grid-column-start: 3;
+	}
+	.card:nth-child(12) {
+		grid-column-end: 7;
+		grid-column-start: 1;
 	}
 }
 
 
-/*
------------------------------------------
+/*-----------------------------------------
 	BUTTON COMPONENTS
 -----------------------------------------
 */
@@ -924,7 +1070,7 @@ html {
 }
 .notification img {
 	margin: 0 1rem;
-	filter: drop-shadow(3px -3px 3px rgba(43, 42, 42, 0.425))
+	filter: drop-shadow(3px -3px 3px rgba(43, 42, 42, 0.425));
 }
 .notification h1 {
 	margin: 0;
@@ -942,7 +1088,8 @@ html {
 	background-color: var(--color-beluga-light);
 	margin: auto;
 	padding: 1rem;
-	width: 100%;}
+	width: 100%;
+}
 
 .notify-error {
 	animation: shake-horizontal 3.5s linear infinite;
