@@ -1,353 +1,345 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head>
+	<head>
 
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Components | Confetti</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" href="https://use.typekit.net/mkn7zci.css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Components | Confetti</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://use.typekit.net/mkn7zci.css">
 
-</head>
+	</head>
 
-<body>
-	<header>
-	<div>
-		<nav class="nav-primary">
-				<a class="logo" href="index.html">Confetti</a>
-				<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="style.html">Style</a></li>
-				<li class="current-page"><a href="components.html">Components</a></li>
-				<li><a href="layouts.html">Layout</a></li>
-				</ul>
-		</nav>
-	</div>
-	</header>
-
-	<section class="hero-block hero-image-components">
-		<h1 class="hero-heading">Components</h1>
-		<div>
-			<p>This is some text for the hero image. This is some text for the hero image. This is some text for the hero image.</p>
-			<a class="button-hero">This button does nothing</a>
-		</div>
-	</section>
-
-	<main>
-	<div class="wrapper">
-		<h1>Components</h1>
-		<h2 id="linkbuttons">Link Buttons</h2>
-		<figure>
-			<a href="" class="link-button button-hero">Hero Button</a>
-			<figcaption>This is primarily used for a call to action.</figcaption>
-		</figure>
-
-		<figure>
-			<a href="" class="link-button button-normal">Normal Button</a>
-			<figcaption>Used to draw attention to a specific action on the page.</figcaption>
-		</figure>
-
-		<figure>
-			<a href="" class="link-button button-secondary">Secondary Button</a><figcaption>Used when there are several selections available.</figcaption>
-		</figure>
-
-		<h2 id="accordions">Drop-Down Menu/Accordions</h2>
-		<details>
-			<summary>This is a drop-down Menu</summary>
+	<body>
+		<header>
 			<div>
-				<p>I kind of like the little triangle carrot marker, I just want to figure out how to put it on the right side.</p>
+			<nav class="nav-primary">
+					<a class="logo" href="index.html">Happening</a>
+					<ul class="nav-primary-links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="style.html">Style</a></li>
+					<li class="current-page"><a href="components.html">Components</a></li>
+					<li><a href="layouts.html">Layout</a></li>
+					</ul>
+			</nav>
 			</div>
-		</details>
+			</header>
 
-		<details>
-			<summary>What else can we put in a drop-down menu?</summary>
-			<div>
-				<ul>
-					<li>We can house a list here!</li>
-					<li>This is fun!</li>
-				</ul>
-			</div>
-		</details>
-
-		<details>
-			<summary>And here's another example for good measure</summary>
-			<div>The mantis shrimp is my spirit animal.</div>
-		</details>
-
-		<h2 id="modal">Modal Dialog</h2>
-		<figure>
-			<button id="open-modal" type="button">Open Modal</button>
-			<dialog id="modal-demo">
-				<h4 class="heading-modal">Heading inside the Modal</h4>
-				<p>This is an example paragraph for inside our modal. We need it to be a couple sentences long so we're gonna type some stuff here to fill the space so we can see exactly how this is going to look.</p>
-			</dialog>
-		</figure>
-
-		<h2 id="forms">Form Inputs</h2>
-		<figure>
-			<form action="#">
-				<h1>Contact Us</h1>
-				<label for="name">Your Full Name</label>
-				<input type="text" required id="full-name" name="name">
-				<label for="email">Email</label>
-				<input type="email" required id="email" name="email">
-				<label for="phone">Telephone</label>
-				<input type="tel" id="phone" name="phone">
-				<label for="color">Your Favorite Color?</label>
-				<input type="text" disabled id="color" name="color">
-				<label for="contact preference">Preferred Communication</label>
-				<p class="form-instruction-text">What is the best method of reaching you?</p>
-				<select id="contact-preference" name="preference">
-					<option disabled hidden selected>Choose One</option>
-					<option>Phone</option>
-					<option>Email</option>
-					<option>Text Message</option>
-				</select>
-				<label for="message">
-				<textarea id="user-message" name="message" placeholder="How may we help you?" required></textarea>
-				<button class="button-link-submit" type="submit">Let's Chat!</button>
-			</form>
-		</figure>
-
-		<figure>
-			<form>
-			<label for="error">Error State</label>
-			<input class="form-error" type="text" id="error" name="error">
-			<p class="form-instruction-text form-error-instruction-text">Please provide the required info!</p>
-			</form>
-		</figure>
-
-		<h2 id="navigation">Navigation</h2>
-		<p>Primary Navigation</p>
-		<figure class="example-nav">
-			<img src="images/primary-nav_325.png" alt="Stacked primary navigation">
-			<figcaption>For mobile viewports up to 550px, primary navigation links will stack at the very top of the page.</figcaption>
-		</figure>
-
-			<figure class="example-nav">
-				<img src="images/primary-nav_stretch.png" alt="Stretched primary navigation">
-				<figcaption>For viewports wider than 550px, primary navigation links align to the right of the screen in a fixed navigation bar which remains at the top of the viewport.</figcaption>
-			</figure>
-
-		<p>Secondary Navigation</p>
-		<section class="nav-secondary">
-			<a class="logo" href="index.html">Confetti</a>
-		
-			<div class="nav-secondary-style">
-					<details>
-						<summary>Style</summary>
-						<ul>
-							<li><a href="style.html#colorpalette">Color Palette</a></li>
-						</li>
-						<li><a href="style.html#typography">Typography</a></li>
-								<ul>
-									<li><a href="style.html#fonts">Fonts</a></li>
-									<li><a href="style.html#headings">Heading Styles</a></li>
-									<li><a href="style.html#bodytext">Body Text</a></li>
-								</ul>
-							<li><a href="style.html#lists">List Styles</a></li>
-							<li><a href="style.html#blockquotes">Block Quotes</a></li>
-						</ul>
-					</details>
-			</div>
-		
-			<div class="nav-secondary-components">
-					<details>
-						<summary>Components</summary>
-						<ul>
-							<li><a href="components.html#linkbuttons">Link Buttons</a></li>
-							<li><a href="components.html#accordions">Drop-Down Menu/Accordions</a></li>
-							<li><a href="components.html#modal">Modal Dialog</a></li>
-							<li><a href="components.html#forms">Forms</a></li>
-							<li><a href="components.html#navigation">Navigation</a></li>
-		
-						</ul>
-					</details>
-			</div>
-		
-			<div class="nav-secondary-layout">
-				<details>
-					<summary>Layout</summary>
-				</details>
-			</div>
-			</section>
-
-		<h2>Notifications</h2>
-		<p>For display purposes, these animations repeat infinitely.</p>
-			<figure>
-				<section class="notification notify-error">
-					<h1>Womp Womp</h1>
-					<div>
-						<img src="images/icon-facepalm-48.png">
-						<p>Oh, no! Something isn't quite right here.</p>
-					</div>
-				</section>
-			</figure>
-
-			<figure>
-				<section class="notification notify-warning">
-					<h1>You sure about this?</h1>
-					<div>
-						<img src="images/icon-error-40.png">
-						<p>You better check yo'self before...well, you know.</p>
-					</div>
-				</section>
-			</figure>
-
-			<figure>
-				<section class="notification notify-neutral">
-					<h1>Neutral Hedgehog says...</h1>
-					<div>
-						<img src="images/icon-hedgehog-48.png">
-						<p>It is your birthday.</p>
-					</div>
-				</section>
-			</figure>
-
-			<figure>
-				<section class="notification notify-success">
-					<h1>Hot diggity dog!</h1>
-					<div>
-						<img src="images/icon-cheers-48.png">
-						<p>Hip, hip, hooray! You did it!</p>
-					</div>
-				</section>
-			</figure>
-
-			<h2>Hero Block</h2>
-			<p>Below, you'll see a screenshot of our hero-block. This example includes some featured text and our "hero button" from our main page. Sub-pages follow the same layout, but will only use the featured text and hero button if there is an appropriate need. The hero block is an opportunity to showcase shapshots of our events, so we like to use vibrant and energetic photos from our productions. Click the image to see the hero block in action at full-size.
-			</p>
-			<figure>
-				<a href="hero-block.html" target="_blank"><img src="images/hero-screenshot.png" alt="screenshot of hero image"></a>
-			</figure>
-
-			<h2>Cards</h2>
-			<p>To display and encapsulate client testimonails, press features, and for staff id plates</p>
-
-			<figure>
-			<div class="card id-plate">
-				<div class="id-plate-main-flex">
-					<div class="card-flex-row-reverse">
-						<h1 class="card-vertical-heading">Stephanie D. Rivera</h1>
-					<div class="id-plate-bio">
-					<img class="id-plate-photo" src="images/profile-small.jpg">
-						<div>
-							<p>Stephanie is a UX student at Austin Community College. She enjoys binge-worthy TV, whiskey, wine, and spoiling her rescue pup, Mojo.</p>        
-							<div class="id-plate-contacts">
-								<ul>
-									<li><a href="https://www.instagram.com/4_piecenugget"><img src="images/icon-instagram-96.png" alt="Instagram logo" title="Stephanies's Instagram"></a></li>
-									<li><a href="https://www.linkedin.com/in/stephaniedrivera"><img src="images/icon-linkedin-96.png" alt="LinkedIn logo" title="Stephanie's LinkedIn"></a></li>
-									<li><a href="mailto:stephanie.rivera88@gmail.com" title="eMail me!"><img src="images/icon-email-80.png" style="max-width: 35px;"></a></li>
-									<li><a href="tel:000-867-5309" title="Call Me, Maybe?"><img src="images/icon-ringing-phone-96.png" style="max-width: 35px;"></a></li>
-								</ul>
-							</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			</figure>
-			<figure>
-			<div class="card article">
-				<div class="article" style="background-image: url(images/article-571.jpg); background-size: cover; background-position: center;">
-					<h1 class="card-vertical-heading">Article Post</h1>
-					<div class="article-byline-date">
-						<p>By Kylo Ren</p>
-						<p>2 August 2020</p>
-					</div>
-				</div>
-					<div class="article-copy-link-button">
-						<p>Let's pretend that some fancy hipster magazine has featured us in their publication...something like Thrillist. This is where the they would mention our specatacular and one-of-a-kind talent for entertainment production.</p>
-						<a class="link-button button-normal" href="">Read More</a>
-					</div>
-			</div>
-			</figure>
-			<figure>
-			<div class="card call-to-action" style="background-image:url(images/contact-us-500.jpg); background-position:center right;">
-				<div class="card-flex-column-flex-end">
-					<h1 class="featured-text call-to-action-heading">Booking</h1>
-						<div class="call-to-action-copy">
-						<p>Putting on an event? Request a consultation with one of our specialists.</p>
-						<a class="link-button button-normal">Contact Us</a>
-						</div>
-					</div>
-			</div>
-			</figure>
-
-		<h3>Card Grid</h3>
-		<p>See below for a screenshot of cards aligned in a grid format. This example includes article cards, call-to-action cards, and an event highlight card. Click the image below to see the responsive layout at full-size.</p>
-		<figure>
-			<a href="layouts.html"><img src="images/card-grid-screenshot.png" alt="Screenshot of Card Grid"></a>
-		</figure>
-
-		<h3>Card Call-Outs</h3>
-		<p>These call-out cards are designed to encourage action from our users. This can stand-alone or can fit atop the previous grid of cards. Again, you may click the image below to see the responsive layout at full-size.</p>
-		<figure>
-			<a href="card-callouts.html"><img src="images/screenshot-card-callout-grid.png" alt="Screenshot of Callout Cards"></a>
-		</figure>
-	</div>
-	</main>
-	<footer>
-		<section class="nav-secondary">
-			<a class="logo" href="index.html">Confetti</a>
-
-			<div class="nav-secondary-style">
-					<details>
-						<summary>Style</summary>
-						<ul>
-							<li><a href="style.html#colorpalette">Color Palette</a></li>
-						</li>
-						<li><a href="style.html#typography">Typography</a></li>
-								<ul>
-									<li><a href="style.html#fonts">Fonts</a></li>
-									<li><a href="style.html#headings">Heading Styles</a></li>
-									<li><a href="style.html#bodytext">Body Text</a></li>
-								</ul>
-							<li><a href="style.html#lists">List Styles</a></li>
-							<li><a href="style.html#blockquotes">Block Quotes</a></li>
-						</ul>
-					</details>
-			</div>
-
-			<div class="nav-secondary-components">
-					<details>
-						<summary>Components</summary>
-						<ul>
-							<li><a href="components.html#linkbuttons">Link Buttons</a></li>
-							<li><a href="components.html#accordions">Drop-Down Menu/Accordions</a></li>
-							<li><a href="components.html#modal">Modal Dialog</a></li>
-							<li><a href="components.html#forms">Forms</a></li>
-							<li><a href="components.html#navigation">Navigation</a></li>
-
-						</ul>
-					</details>
-			</div>
-
-			<div class="nav-secondary-layout">
-				<details>
-					<summary>Layout</summary>
-				</details>
-			</div>
+		<section class="hero-block hero-image-components">
+			<h1 class="hero-heading">Components</h1>
 		</section>
+
+		<main>
+		<div class="wrapper">
+			<h1>Components</h1>
+			<h2 id="linkbuttons">Link Buttons</h2>
+			<figure>
+				<a href="" class="link-button button-hero">Hero Button</a>
+				<figcaption>This is primarily used for a call to action.</figcaption>
+			</figure>
+
+			<figure>
+				<a href="" class="link-button button-normal">Normal Button</a>
+				<figcaption>Used to draw attention to a specific action on the page.</figcaption>
+			</figure>
+
+			<figure>
+				<a href="" class="link-button button-secondary">Secondary Button</a><figcaption>Used when there are several selections available.</figcaption>
+			</figure>
+
+			<h2 id="accordions">Drop-Down Menu/Accordions</h2>
+			<details>
+				<summary>This is a drop-down Menu</summary>
+				<div>
+					<p>I kind of like the little triangle carrot marker, I just want to figure out how to put it on the right side.</p>
+				</div>
+			</details>
+
+			<details>
+				<summary>What else can we put in a drop-down menu?</summary>
+				<div>
+					<ul>
+						<li>We can house a list here!</li>
+						<li>This is fun!</li>
+					</ul>
+				</div>
+			</details>
+
+			<details>
+				<summary>And here's another example for good measure</summary>
+				<div>The mantis shrimp is my spirit animal.</div>
+			</details>
+
+			<h2 id="modal">Modal Dialog</h2>
+			<figure>
+				<button id="open-modal" type="button">Open Modal</button>
+				<dialog id="modal-demo">
+					<h4 class="heading-modal">Heading inside the Modal</h4>
+					<p>This is an example paragraph for inside our modal. We need it to be a couple sentences long so we're gonna type some stuff here to fill the space so we can see exactly how this is going to look.</p>
+				</dialog>
+			</figure>
+
+			<h2 id="forms">Form Inputs</h2>
+		</div>
+			<figure class="form-figure">
+				<div class="form-group">
+					<div class="form-wrapper">
+						<h1 class="form-heading">Make something happen.</h1>
+							<form action="#">
+								<h1>Contact us</h1>
+								<label for="name">Your Full Name</label>
+								<input type="text" required id="full-name" name="name">
+								<label for="subject">Subject</label>
+								<input type="text" name="subject" id="subject">
+								<label for="email">Email</label>
+								<input type="email" required id="email" name="email">
+								<label for="phone">Telephone</label>
+								<input type="tel" id="phone" name="phone">
+								<label for="contact preference">Preferred Communication</label>
+								<p class="form-instruction-text">What is the best method of reaching you?</p>
+								<select id="contact-preference" name="preference">
+									<option disabled hidden selected>Choose One</option>
+									<option>Phone</option>
+									<option>Email</option>
+									<option>Text Message</option>
+								</select>
+								<label for="message">
+								<textarea id="user-message" name="message" placeholder="How may we help you?" required></textarea>
+								<button class="button-link-submit" type="submit">Let's Chat!</button>
+							</form>
+						</div>
+				</div>
+			</figure>
+		<div class="wrapper">
+			<figure>
+				<form class="example-form-error">
+				<label for="error">Error State</label>
+				<input class="form-error" type="text" id="error" name="error">
+				<p class="form-instruction-text form-error-instruction-text">Please provide the required info!</p>
+				</form>
+			</figure>
+
+			<h2 id="navigation">Navigation</h2>
+			<p>Primary Navigation</p>
+			<figure class="example-nav">
+				<img src="images/primary-nav_325.png" alt="Stacked primary navigation">
+				<figcaption>For smaller viewports, primary navigation links will stack at the very top of the page.</figcaption>
+			</figure>
+
+				<figure class="example-nav">
+					<img src="images/primary-nav_stretch.png" alt="Stretched primary navigation">
+					<figcaption>For wider viewports, primary navigation links align to the right of the screen in a fixed navigation bar which remains at the top of the viewport.</figcaption>
+				</figure>
+
+			<p>Secondary Navigation</p>
+			<section class="nav-secondary">
+				<div>
+					<h1>Style</h1>
+					<ul>
+						<li><a href="style.html#colorpalette">Color Palette</a></li>
+					</li>
+					<li><a href="style.html#typography">Typography</a></li>
+							<ul>
+								<li><a href="style.html#fonts">Fonts</a></li>
+								<li><a href="style.html#headings">Heading Styles</a></li>
+								<li><a href="style.html#bodytext">Body Text</a></li>
+							</ul>
+						<li><a href="style.html#lists">List Styles</a></li>
+						<li><a href="style.html#blockquotes">Block Quotes</a></li>
+					</ul>
+				</div>
+
+				<div>
+					<h1>Components</h1>
+					<ul>
+						<li><a href="components.html#linkbuttons">Link Buttons</a></li>
+						<li><a href="components.html#accordions">Drop-Down Menu/Accordions</a></li>
+						<li><a href="components.html#modal">Modal Dialog</a></li>
+						<li><a href="components.html#forms">Forms</a></li>
+						<li><a href="components.html#navigation">Navigation</a></li>
+
+					</ul>
+				</div>
+
+				<div>
+					<h1>Layout</h1>
+					<ul>
+						<li><a href="layouts.html">Responsive Card Layout</a></li>
+					</ul>
+				</div>
+			</section>
+		<div class="copywright">
+			<p>Copywright © <span class="logo">Happening</span> 2020</p>
+		</div>
+
+			<h2>Notifications</h2>
+			<p>For display purposes, these animations repeat infinitely.</p>
+				<figure>
+					<section class="notification notify-error">
+						<h1>Womp Womp</h1>
+						<div>
+							<img src="images/icon-facepalm-48.png">
+							<p>Oh, no! Something isn't quite right here.</p>
+						</div>
+					</section>
+				</figure>
+
+				<figure>
+					<section class="notification notify-warning">
+						<h1>You sure about this?</h1>
+						<div>
+							<img src="images/icon-error-40.png">
+							<p>You better check yo'self before...well, you know.</p>
+						</div>
+					</section>
+				</figure>
+
+				<figure>
+					<section class="notification notify-neutral">
+						<h1>Neutral Hedgehog says...</h1>
+						<div>
+							<img src="images/icon-hedgehog-48.png">
+							<p>It is your birthday.</p>
+						</div>
+					</section>
+				</figure>
+
+				<figure>
+					<section class="notification notify-success">
+						<h1>Hot diggity dog!</h1>
+						<div>
+							<img src="images/icon-cheers-48.png">
+							<p>Hip, hip, hooray! You did it!</p>
+						</div>
+					</section>
+				</figure>
+
+				<h2>Hero Block</h2>
+				<p>Below, you'll see a screenshot of our hero-block. This example includes some featured text and our "hero button" from our main page. Sub-pages follow the same layout, but will only use the featured text and hero button if there is an appropriate need. The hero block is an opportunity to showcase shapshots of our events, so we like to use vibrant and energetic photos from our productions. Click the image to see the hero block in action at full-size.
+				</p>
+				<figure>
+					<a href="hero-block.html" target="_blank"><img src="images/hero-screenshot.png" alt="screenshot of hero image"></a>
+				</figure>
+
+				<h2>Cards</h2>
+				<p>To display and encapsulate staff I.D. plates, article information, and calls-to-action.</p>
+
+				<figure>
+					<div class="card id-plate">
+						<h1>Stephanie Rivera</h1>
+						<div class="bio">
+							<img src="images/profile-small.jpg" alt="Stephanie Rivera profile photo">
+							<blockquote>
+								"I woke up like this"
+							</blockquote>
+							<p>Stephanie is a UX student at Austin Community College. She enjoys binge-worthy TV, whiskey, wine, and spoiling her rescue pup Mojo.</p>
+						</div>
+						<div class="id-plate-contacts">
+							<ul>
+								<li><a href="https://www.instagram.com/4_piecenugget"><img src="images/icon-instagram-96.png" alt="Instagram logo" title="Stephanies's Instagram"></a></li>
+								<li><a href="https://www.linkedin.com/in/stephaniedrivera"><img src="images/icon-linkedin-96.png" alt="LinkedIn logo" title="Stephanie's LinkedIn"></a></li>
+								<li><a href="mailto:stephanie.rivera88@gmail.com" title="eMail me!"><img src="images/icon-email-80.png" style="max-width: 35px;"></a></li>
+								<li><a href="tel:000-867-5309" title="Call Me, Maybe?"><img src="images/icon-ringing-phone-96.png" style="max-width: 35px;"></a></li>
+							</ul>
+						</div>
+				
+					</div>
+				</figure>
+				<figure>
+					<div class="card article">
+						<div class="article-photo-info">
+							<img src="images/zeppelin.jpg" alt="Led Zeppelin performing on stage">
+							<h1>Eclectic and Electric 60s Rock Festival</h1>
+							<div class="article-byline-date">
+								<p>By Kylo Ren</p>
+								<p>2 August 2020</p>
+							</div>
+						</div>
+							<div class="article-copy-link-button">
+								<p>Fun is defined by the Oxford English Dictionary as "Light-hearted pleasure, enjoyment, or amusement; boisterous joviality or merrymaking; entertainment".[1] Although particularly associated with recreation and play, fun may be encountered during work, social functions, and in daily life.</p>
+								<a class="link-button button-normal" href="">Read More</a>
+							</div>
+					</div>
+				</figure>
+				<figure>
+					<div class="card callout" style="--card-background:url(images/heart-hands-1500.jpg">
+						<h1>Concerts & Music Festivals</h1>
+						<a href="" class="link-button button-normal">Past Shows</a>
+					</div>
+				</figure>
+
+			<h3>Card Grid</h3>
+			<p>See below for a screenshot of cards aligned in a grid format. This example includes twelve article cards. Click the image below to see the responsive layout at full-size.</p>
+			<figure>
+				<a href="layouts.html"><img src="images/card-grid-screenshot.png" alt="Screenshot of Card Grid"></a>
+			</figure>
+
+			<h3>Card Call-Outs</h3>
+			<p>These call-out cards are designed to encourage action from our users. Again, you may click the image below to see the responsive layout at full-size.</p>
+			<figure>
+				<a href="card-callouts.html"><img src="images/screenshot-card-callout-grid.png" alt="Screenshot of Callout Cards"></a>
+			</figure>
+		</div>
+		</main>
+		<footer>
+			<section class="nav-secondary">
+				<div>
+					<h1>Style</h1>
+					<ul>
+						<li><a href="style.html#colorpalette">Color Palette</a></li>
+					</li>
+					<li><a href="style.html#typography">Typography</a></li>
+							<ul>
+								<li><a href="style.html#fonts">Fonts</a></li>
+								<li><a href="style.html#headings">Heading Styles</a></li>
+								<li><a href="style.html#bodytext">Body Text</a></li>
+							</ul>
+						<li><a href="style.html#lists">List Styles</a></li>
+						<li><a href="style.html#blockquotes">Block Quotes</a></li>
+					</ul>
+				</div>
+
+				<div>
+					<h1>Components</h1>
+					<ul>
+						<li><a href="components.html#linkbuttons">Link Buttons</a></li>
+						<li><a href="components.html#accordions">Drop-Down Menu/Accordions</a></li>
+						<li><a href="components.html#modal">Modal Dialog</a></li>
+						<li><a href="components.html#forms">Forms</a></li>
+						<li><a href="components.html#navigation">Navigation</a></li>
+
+					</ul>
+				</div>
+
+				<div>
+					<h1>Layout</h1>
+					<ul>
+						<li><a href="layouts.html">Responsive Card Layout</a></li>
+					</ul>
+				</div>
+			</section>
+		<div class="copywright">
+			<p>Copywright © <span class="logo">Happening</span> 2020</p>
+		</div>
 	</footer>
-</body>
-<script>
-	document.addEventListener('DOMContentLoaded', function(){
+	</body>
+	<script>
+		document.addEventListener('DOMContentLoaded', function(){
 
-	const modal = document.querySelector('dialog');
-	const open = document.getElementById('open-modal');
+		const modal = document.querySelector('dialog');
+		const open = document.getElementById('open-modal');
 
-	open.addEventListener('click', () => {
-	modal.showModal();
-	});
+		open.addEventListener('click', () => {
+		modal.showModal();
+		});
 
-	modal.addEventListener('click', event => {
-	if (event.target === modal) {
-	modal.close('cancelled');
-	}
-	});
+		modal.addEventListener('click', event => {
+		if (event.target === modal) {
+		modal.close('cancelled');
+		}
+		});
 
-	});
+		});
 	</script>
 </html>
